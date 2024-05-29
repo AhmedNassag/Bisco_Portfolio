@@ -59,16 +59,39 @@ return [
     'Active'   => 'مفعل',
     'InActive' => 'غير مفعل',
     'And'      => 'و',
-    
-    //Product
-    'Product'  => 'المنتج',
-    'Products' => 'المنتجات',
-    'Name'     => 'الإسم',
-    'Details'  => 'التفاصيل',
-    'Price'    => 'السعر',
 
     //Slider
-    'Slider'   => 'الواجهة',
-    'Sliders'  => 'الواجهات',
-    'Photo'    => 'الصورة',
+    'Slider'  => 'الواجهة',
+    'Sliders' => 'الواجهات',
+    'Name'    => 'الإسم',
+    'Details' => 'التفاصيل',
+    'Photo'   => 'الصورة',
+
+    //Slider Footer
+    'Slider Footer'  => 'أسفل الواجهة',
+    'Slider Footers' => 'أسفل الواجهات',
+
+    //Who We Are
+    'Who We Are' => 'من نحن',
+
+    //Who We Are Side
+    'Who We Are Side'  => 'الجانب',
+    'Who We Are Sides' => 'الجوانب',
+
+    //Who We Are Detail
+    'Who We Are Detail'  => 'المحتوي',
+    'Who We Are Details' => 'المحتويات',
+
+    //Who We Are FAQ
+    'Who We Are Faq'  => 'سؤال وإجابة',
+    'Who We Are Faqs' => 'الأسئلة والأجوبة',
+    'Question'        => 'السؤال',
+    'Answer'          => 'الإجابة',
+
+    //Our Services
+    'Our Services' => 'خدماتنا',
+
+    //Service Detail
+    'Service Detail'  => 'المحتوي',
+    'Service Details' => 'المحتويات',
 ];

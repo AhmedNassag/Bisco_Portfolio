@@ -4,7 +4,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h4 class="modal-title">{{ trans('main.Add') }} {{ trans('main.Slider') }}</h4>
+                <h4 class="modal-title">{{ trans('main.Add') }}</h4>
                 <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
             </div>
 

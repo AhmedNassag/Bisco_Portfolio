@@ -128,7 +128,7 @@ class SliderController extends Controller
                 'name_en'    => 'nullable|string|max:191|unique:sliders,name_en,'.$request->id,
                 'details_ar' => 'nullable|string',
                 'details_en' => 'nullable|string',
-                'photo'      => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'photo'      => 'nullable',
             ]);
             if($validator->fails())
             {

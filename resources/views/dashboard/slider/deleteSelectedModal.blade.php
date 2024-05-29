@@ -15,19 +15,20 @@
                     <p>{{ trans('main.Are You Sure Of Multiple Deleting..??') }}</p>
                 </div>
                 <div class="modal-btn delete-action">
-                    <form action="{{ route('slider.deleteSelected') }}" method="POST" id="delete_multi_slider_form">
+                    <form action="{{ route('slider.deleteSelected') }}" method="POST" id="delete_multi_form">
                         {{ method_field('Delete') }}
                         @csrf
                         <!-- id -->
                         <input class="text" type="hidden" id="delete_selected_id" name="delete_selected_id" value=''>
                         <div class="row">
                             <div class="col-6">
-                                <a class="btn btn-primary continue-btn" onclick="event.preventDefault();document.getElementById('delete_multi_slider_form').submit();">{{ trans('main.Delete') }}</a>
+                                <a class="btn btn-primary continue-btn" onclick="event.preventDefault();document.getElementById('delete_multi_form').submit();">{{ trans('main.Delete') }}</a>
                             </div>
                             <div class="col-6">
                                 <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">{{ trans('main.Close') }}</a>
                             </div>
                         </div>
+                    </form>
                 </div>
             </div>
         </div>

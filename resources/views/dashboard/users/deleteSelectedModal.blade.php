@@ -21,6 +21,7 @@
                                 <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">{{ trans('main.Close') }}</a>
                             </div>
                         </div>
+                    </form>
                 </div>
             </div>
         </div>
