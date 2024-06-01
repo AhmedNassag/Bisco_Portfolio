@@ -46,7 +46,7 @@ class WhoWeAreDetailAdded extends Notification
     {
         return [
             'route' => 'who-we-are-detailShowNotification/'.$this->route_id.'',
-            'title' => 'تم إضافة تفاصيل من نحن بواسطة',
+            'title' => 'تم إضافة نبذة من نحن بواسطة',
             'user'  => Auth::user()->name,
         ];
     }

@@ -16,6 +16,8 @@ return [
     'View Details'    => 'عرض التفاصيل',
 
     //Main
+    'Arabic'                                => 'العربية',
+    'English'                               => 'الإنجليزية',
     'In Arabic'                             => 'باللغة العربية',
     'In English'                            => 'باللغة الإنجليزية',
     'Add'                                   => 'إضافة',
@@ -79,8 +81,8 @@ return [
     'Who We Are Sides' => 'الجوانب',
 
     //Who We Are Detail
-    'Who We Are Detail'  => 'المحتوي',
-    'Who We Are Details' => 'المحتويات',
+    'Who We Are Detail'  => 'النبذة',
+    'Who We Are Details' => 'النبذة',
 
     //Who We Are FAQ
     'Who We Are Faq'  => 'سؤال وإجابة',
@@ -92,6 +94,49 @@ return [
     'Our Services' => 'خدماتنا',
 
     //Service Detail
-    'Service Detail'  => 'المحتوي',
-    'Service Details' => 'المحتويات',
+    'Service Detail'  => 'النبذة',
+    'Service Details' => 'النبذة',
+
+    //Service Item
+    'Service Item'  => 'العنصر',
+    'Service Items' => 'العناصر',
+
+    //Projects
+    'Projects'     => 'المشاريع',
+    'Our Projects' => 'مشاريعنا',
+
+    //Project Detail
+    'Project Detail'  => 'النبذة',
+    'Project Details' => 'النبذة',
+
+    //Project Item
+    'Project Item'  => 'العنصر',
+    'Project Items' => 'العناصر',
+
+    //Courses
+    'Courses'     => 'المحاضرات',
+    'Our Courses' => 'محاضراتنا',
+
+    //Course Item
+    'Course Item'  => 'العنصر',
+    'Course Items' => 'العناصر',
+    'Author'       => 'المحاضر',
+
+    //Company Informations
+    'Company Informations' => 'معلومات الشركة',
+    'Address'              => 'العنوان',
+    'phone'                => 'رقم التليفون',
+    'mobile'               => 'رقم الموبايل',
+    'email'                => 'البريد الإلكتروني',
+    'whatsapp'             => 'واتساب',
+    'facebook_url'         => 'رابط فيسبوك',
+    'youtube_url'          => 'رابط يوتيوب',
+    'linkedin_url'         => 'رابط لينكد إن',
+    'twitter_url'          => 'رابط تويتر',
+    'instagram_url'        => 'رابط إنستجرام',
+
+    //Message
+    'Message'  => 'الرسالة',
+    'Messages' =>'الرسائل',
+    'Phone'    => 'رقم التليفون',
 ];

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LangController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\Dashboard\RoleController;
 use App\Http\Controllers\Dashboard\UserController;
@@ -13,6 +14,12 @@ use App\Http\Controllers\Dashboard\WhoWeAreSideController;
 use App\Http\Controllers\Dashboard\WhoWeAreDetailController;
 use App\Http\Controllers\Dashboard\WhoWeAreFaqController;
 use App\Http\Controllers\Dashboard\ServiceDetailController;
+use App\Http\Controllers\Dashboard\ServiceItemController;
+use App\Http\Controllers\Dashboard\ProjectDetailController;
+use App\Http\Controllers\Dashboard\ProjectItemController;
+use App\Http\Controllers\Dashboard\CourseItemController;
+use App\Http\Controllers\Dashboard\CompanyInformationController;
+use App\Http\Controllers\Dashboard\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +40,14 @@ Auth::routes(['register' => false]);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 /****************************** Start Admin Routes ******************************/
-Route::Group(['prefix' => 'admin', 'middleware' => 'auth'], function () { 
+Route::Group(['prefix' => 'admin', 'middleware' => ['auth','lang']], function () { 
+
+    Route::prefix('lang')->name('lang.')->group( function () {
+        Route::controller(LangController::class)->group( function () {
+            Route::get('/ar' ,  'ar')->name('ar');
+            Route::get('/en' ,  'en')->name('en');
+        });
+    });
 
     //roles
     Route::resource('role', RoleController::class);
@@ -73,17 +87,6 @@ Route::Group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 
 
-    //who-we-are-side
-    Route::get('who-we-are-side', [WhoWeAreSideController::class, 'index'])->name('who-we-are-side.index');
-    Route::post('who-we-are-side/store', [WhoWeAreSideController::class, 'store'])->name('who-we-are-side.store');
-    Route::get('who-we-are-side/edit/{id}', [WhoWeAreSideController::class, 'edit'])->name('who-we-are-side.edit');
-    Route::post('who-we-are-side/update', [WhoWeAreSideController::class, 'update'])->name('who-we-are-side.update');
-    Route::delete('who-we-are-side/destroy', [WhoWeAreSideController::class, 'destroy'])->name('who-we-are-side.destroy');
-    Route::delete('who-we-are-sideDeleteSelected', [WhoWeAreSideController::class, 'deleteSelected'])->name('who-we-are-side.deleteSelected');
-    Route::get('who-we-are-sideShowNotification/{id}/{notification_id}', [WhoWeAreSideController::class, 'showNotification'])->name('who-we-are-side.showNotification');
-
-
-
     //who-we-are-detail
     Route::get('who-we-are-detail', [WhoWeAreDetailController::class, 'index'])->name('who-we-are-detail.index');
     Route::post('who-we-are-detail/store', [WhoWeAreDetailController::class, 'store'])->name('who-we-are-detail.store');
@@ -92,6 +95,17 @@ Route::Group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('who-we-are-detail/destroy', [WhoWeAreDetailController::class, 'destroy'])->name('who-we-are-detail.destroy');
     Route::delete('who-we-are-detailDeleteSelected', [WhoWeAreDetailController::class, 'deleteSelected'])->name('who-we-are-detail.deleteSelected');
     Route::get('who-we-are-detailShowNotification/{id}/{notification_id}', [WhoWeAreDetailController::class, 'showNotification'])->name('who-we-are-detail.showNotification');
+
+
+
+    //who-we-are-side
+    Route::get('who-we-are-side', [WhoWeAreSideController::class, 'index'])->name('who-we-are-side.index');
+    Route::post('who-we-are-side/store', [WhoWeAreSideController::class, 'store'])->name('who-we-are-side.store');
+    Route::get('who-we-are-side/edit/{id}', [WhoWeAreSideController::class, 'edit'])->name('who-we-are-side.edit');
+    Route::post('who-we-are-side/update', [WhoWeAreSideController::class, 'update'])->name('who-we-are-side.update');
+    Route::delete('who-we-are-side/destroy', [WhoWeAreSideController::class, 'destroy'])->name('who-we-are-side.destroy');
+    Route::delete('who-we-are-sideDeleteSelected', [WhoWeAreSideController::class, 'deleteSelected'])->name('who-we-are-side.deleteSelected');
+    Route::get('who-we-are-sideShowNotification/{id}/{notification_id}', [WhoWeAreSideController::class, 'showNotification'])->name('who-we-are-side.showNotification');
 
 
 
@@ -115,7 +129,72 @@ Route::Group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('service-detailDeleteSelected', [ServiceDetailController::class, 'deleteSelected'])->name('service-detail.deleteSelected');
     Route::get('service-detailShowNotification/{id}/{notification_id}', [ServiceDetailController::class, 'showNotification'])->name('service-detail.showNotification');
 
+    
+
+    //service-item
+    Route::get('service-item', [ServiceItemController::class, 'index'])->name('service-item.index');
+    Route::post('service-item/store', [ServiceItemController::class, 'store'])->name('service-item.store');
+    Route::get('service-item/edit/{id}', [ServiceItemController::class, 'edit'])->name('service-item.edit');
+    Route::post('service-item/update', [ServiceItemController::class, 'update'])->name('service-item.update');
+    Route::delete('service-item/destroy', [ServiceItemController::class, 'destroy'])->name('service-item.destroy');
+    Route::delete('service-itemDeleteSelected', [ServiceItemController::class, 'deleteSelected'])->name('service-item.deleteSelected');
+    Route::get('service-itemShowNotification/{id}/{notification_id}', [ServiceItemController::class, 'showNotification'])->name('service-item.showNotification');
+
+
+
+    //project-detail
+    Route::get('project-detail', [ProjectDetailController::class, 'index'])->name('project-detail.index');
+    Route::post('project-detail/store', [ProjectDetailController::class, 'store'])->name('project-detail.store');
+    Route::get('project-detail/edit/{id}', [ProjectDetailController::class, 'edit'])->name('project-detail.edit');
+    Route::post('project-detail/update', [ProjectDetailController::class, 'update'])->name('project-detail.update');
+    Route::delete('project-detail/destroy', [ProjectDetailController::class, 'destroy'])->name('project-detail.destroy');
+    Route::delete('project-detailDeleteSelected', [ProjectDetailController::class, 'deleteSelected'])->name('project-detail.deleteSelected');
+    Route::get('project-detailShowNotification/{id}/{notification_id}', [ProjectDetailController::class, 'showNotification'])->name('project-detail.showNotification');
+
+    
+
+    //project-item
+    Route::get('project-item', [ProjectItemController::class, 'index'])->name('project-item.index');
+    Route::post('project-item/store', [ProjectItemController::class, 'store'])->name('project-item.store');
+    Route::get('project-item/edit/{id}', [ProjectItemController::class, 'edit'])->name('project-item.edit');
+    Route::post('project-item/update', [ProjectItemController::class, 'update'])->name('project-item.update');
+    Route::delete('project-item/destroy', [ProjectItemController::class, 'destroy'])->name('project-item.destroy');
+    Route::delete('project-itemDeleteSelected', [ProjectItemController::class, 'deleteSelected'])->name('project-item.deleteSelected');
+    Route::get('project-itemShowNotification/{id}/{notification_id}', [ProjectItemController::class, 'showNotification'])->name('project-item.showNotification');
+
+    
+
+    //course-item
+    Route::get('course-item', [CourseItemController::class, 'index'])->name('course-item.index');
+    Route::post('course-item/store', [CourseItemController::class, 'store'])->name('course-item.store');
+    Route::get('course-item/edit/{id}', [CourseItemController::class, 'edit'])->name('course-item.edit');
+    Route::post('course-item/update', [CourseItemController::class, 'update'])->name('course-item.update');
+    Route::delete('course-item/destroy', [CourseItemController::class, 'destroy'])->name('course-item.destroy');
+    Route::delete('course-itemDeleteSelected', [CourseItemController::class, 'deleteSelected'])->name('course-item.deleteSelected');
+    Route::get('course-itemShowNotification/{id}/{notification_id}', [CourseItemController::class, 'showNotification'])->name('course-item.showNotification');
+
+    
+
+    //company-information
+    Route::get('company-information', [CompanyInformationController::class, 'index'])->name('company-information.index');
+    Route::post('company-information/store', [CompanyInformationController::class, 'store'])->name('company-information.store');
+    Route::get('company-information/edit/{id}', [CompanyInformationController::class, 'edit'])->name('company-information.edit');
+    Route::post('company-information/update', [CompanyInformationController::class, 'update'])->name('company-information.update');
+    Route::delete('company-information/destroy', [CompanyInformationController::class, 'destroy'])->name('company-information.destroy');
+    Route::delete('company-informationDeleteSelected', [CompanyInformationController::class, 'deleteSelected'])->name('company-information.deleteSelected');
+    Route::get('company-informationShowNotification/{id}/{notification_id}', [CompanyInformationController::class, 'showNotification'])->name('company-information.showNotification');
+
+
+
+    //message
+    Route::get('message', [MessageController::class, 'index'])->name('message.index');
+    Route::delete('message/destroy', [MessageController::class, 'destroy'])->name('message.destroy');
+    Route::delete('messageDeleteSelected', [MessageController::class, 'deleteSelected'])->name('message.deleteSelected');
+    Route::get('messageShowNotification/{id}/{notification_id}', [MessageController::class, 'showNotification'])->name('message.showNotification');
+
 });
+    Route::post('message/store', [MessageController::class, 'store'])->name('message.store');
+    
 /****************************** End Admin Routes ******************************/
 
 //general routes

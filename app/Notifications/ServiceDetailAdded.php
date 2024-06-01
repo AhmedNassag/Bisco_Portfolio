@@ -46,7 +46,7 @@ class ServiceDetailAdded extends Notification
     {
         return [
             'route' => 'service-detailShowNotification/'.$this->route_id.'',
-            'title' => 'تم إضافة تفاصيل خدماتنا بواسطة',
+            'title' => 'تم إضافة نبذة خدماتنا بواسطة',
             'user'  => Auth::user()->name,
         ];
     }

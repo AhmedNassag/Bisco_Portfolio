@@ -39,8 +39,8 @@
 						<div class="card wizard-card flex-fill">
 							<div class="card-body">
 								<p class="text-primary mt-0 mb-2">{{ trans('main.Products') }}</p>
-								<h5>{{ App\Models\Product::count(); }}</h5>
-								<p><a href="{{ route('product.index') }}">{{ trans('main.View Details') }}</a></p>
+								<h5>5</h5>
+								<p><a href="#">{{ trans('main.View Details') }}</a></p>
 
 								<span class="dash-widget-icon bg-1">
 									<i class="fas fa-th-large"></i>

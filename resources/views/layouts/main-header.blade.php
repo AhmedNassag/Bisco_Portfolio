@@ -38,6 +38,33 @@
 		<!-- Header Menu -->
 		<ul class="nav user-menu">
 
+			<!--Start Languages -->
+			<li class="nav-item dropdown has-arrow main-drop">
+				<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+					@if ( app()->getLocale() == 'ar')
+					<img src="{{ asset('assets_admin/img/arabic.png') }}" alt="Arabic">
+					<span class="status online">{{ trans('main.Arabic') }}</span>
+					@else
+					<img src="{{ asset('assets_admin/img/english.png') }}" alt="English">
+					<span class="status online">{{ trans('main.English') }}</span>
+					@endif
+				</a>
+				<div class="dropdown-menu">
+					@if ( app()->getLocale() == 'en')
+					<a class="dropdown-item" href="{{route('lang.ar') }}">
+						<img src="{{ asset('assets_admin/img/arabic.png') }}" alt="">
+						{{ trans('main.Arabic') }}
+					</a>
+					@else
+					<a class="dropdown-item" href="{{route('lang.en') }}">
+						<img src="{{ asset('assets_admin/img/english.png') }}" alt="">
+						{{ trans('main.English') }}
+					</a>
+					@endif
+				</div>
+			</li>
+			<!-- End Languages -->
+
 			<!-- Start Notifications -->
 			@can('الإشعارات')
 				<li class="nav-item dropdown">

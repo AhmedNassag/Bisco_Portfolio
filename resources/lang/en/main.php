@@ -18,6 +18,8 @@ return [
     'General Data'    => 'General Data',
 
     //Main
+    'Arabic'                                => 'Arabic',
+    'English'                               => 'English',
     'In Arabic'                             => 'In Arabic',
     'In English'                            => 'In English',
     'Add'                                   => 'Add',
@@ -66,7 +68,7 @@ return [
     'Slider'  => 'Slider',
     'Sliders' => 'Sliders',
     'Name'    => 'Name',
-    'Details' => 'Details',
+    'Details' => 'Berief',
     'Photo'   => 'Photo',
 
     //Slider Footer
@@ -81,8 +83,8 @@ return [
     'Who We Are Sides' => 'Sides',
 
     //Who We Are Details
-    'Who We Are Detail'  => 'Detail',
-    'Who We Are Details' => 'Details',
+    'Who We Are Detail'  => 'Berief',
+    'Who We Are Details' => 'Berief',
 
     //Who We Are FAQ
     'Who We Are Faq'  => 'FAQ',
@@ -94,6 +96,49 @@ return [
     'Our Services' => 'Our Services',
 
     //Service Details
-    'Service Detail'  => 'Detail',
-    'Service Details' => 'Details',
+    'Service Detail'  => 'Berief',
+    'Service Details' => 'Berief',
+
+    //Service Item
+    'Service Item'  => 'Item',
+    'Service Items' => 'Items',
+
+    //Projects
+    'Services'     => 'Projects',
+    'Our Services' => 'Our Projects',
+
+    //Project Details
+    'Project Detail'  => 'Berief',
+    'Project Details' => 'Berief',
+
+    //Project Item
+    'Project Item'  => 'Item',
+    'Project Items' => 'Items',
+
+    //Courses
+    'Courses'     => 'Courses',
+    'Our Courses' => 'Our Courses',
+
+    //Course Item
+    'Course Item'  => 'Item',
+    'Course Items' => 'Items',
+    'Author'       => 'Author',
+
+    //Company Informations
+    'Company Informations' => 'Company Informations',
+    'Address'              => 'Address',
+    'phone'                => 'Phone',
+    'mobile'               => 'Mobile',
+    'email'                => 'Email',
+    'whatsapp'             => 'Whatsapp',
+    'facebook_url'         => 'Facebook URL',
+    'youtube_url'          => 'Youtube URL',
+    'linkedin_url'         => 'Linkedin URL',
+    'twitter_url'          => 'Twitter URL',
+    'instagram_url'        => 'Instagram URL',
+
+    //Message
+    'Message'  => 'Message',
+    'Messages' =>'Messages',
+    'Phone'    => 'Phone',
 ];
