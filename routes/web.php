@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LangController;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Dashboard\RoleController;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Dashboard\ProductController;
@@ -32,9 +33,9 @@ use App\Http\Controllers\Dashboard\MessageController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
 
 Auth::routes(['register' => false]);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -193,9 +194,26 @@ Route::Group(['prefix' => 'admin', 'middleware' => ['auth','lang']], function ()
     Route::get('messageShowNotification/{id}/{notification_id}', [MessageController::class, 'showNotification'])->name('message.showNotification');
 
 });
-    Route::post('message/store', [MessageController::class, 'store'])->name('message.store');
-    
 /****************************** End Admin Routes ******************************/
+
+
+
+
+
+/****************************** Start Site Routes ******************************/
+Route::Group(['middleware' => ['auth','lang']], function () { 
+    Route::get('/', [SiteController::class,'index'])->name('site.index');
+    Route::get('projects', [SiteController::class,'projects'])->name('site.projects');
+    Route::get('project-item/{name}', [SiteController::class,'projectItem'])->name('site.projectItem');
+    Route::get('courses', [SiteController::class,'courses'])->name('site.courses');
+    Route::get('contact-us', [SiteController::class,'contactUs'])->name('site.contactUs');
+});
+Route::post('message/store', [MessageController::class, 'store'])->name('message.store');
+/****************************** End Site Routes ******************************/
+
+
+
+
 
 //general routes
 Route::get('show_file/{folder_name}/{photo_name}', [GeneralController::class, 'show_file'])->name('show_file');

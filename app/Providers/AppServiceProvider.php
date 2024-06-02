@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
+use App\Models\CompanyInformation;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Share the variable with all views
+        $companyInformation = CompanyInformation::first();
+        View::share('companyInformation', $companyInformation);
+
         Paginator::useBootstrap();
     }
 }

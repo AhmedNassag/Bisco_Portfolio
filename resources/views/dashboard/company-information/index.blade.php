@@ -89,9 +89,9 @@
                                 <button type="button" class="btn filter-btn me-2" id="filter_search">
                                     <i class="fas fa-filter"></i>
                                 </button>
-                                <button type="button" class="btn" id="btn_delete_selected" title="{{ trans('main.Delete Selected') }}" style="display:none; width: 42px; height: 42px; justify-content: center; align-items: center; color: #fff; background: red; border: 1px solid red; border-radius: 5px;">
+                                <!-- <button type="button" class="btn" id="btn_delete_selected" title="{{ trans('main.Delete Selected') }}" style="display:none; width: 42px; height: 42px; justify-content: center; align-items: center; color: #fff; background: red; border: 1px solid red; border-radius: 5px;">
                                     <i class="fas fa-trash-alt"></i>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                                                         <?php $i++; ?>
                                                         <tr>
                                                             <td class="text-center notPrint">
-                                                                <input id="delete_selected_input" type="checkbox" value="{{ $item->id }}" class="box1 mr-1" oninput="showBtnDeleteSelected()">
+                                                                <!-- <input id="delete_selected_input" type="checkbox" value="{{ $item->id }}" class="box1 mr-1" oninput="showBtnDeleteSelected()"> -->
                                                                 {{ $i }}
                                                             </td>
                                                             <td class="text-center">{{ $item->name }}</td>
@@ -178,7 +178,7 @@
                                                             </td>
                                                             <td class="text-center">
                                                                 <button type="button" class="editBtn btn btn-sm btn-secondary mr-1" value="{{ $item->id }}"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="deleteBtn btn btn-sm btn-danger" value="{{ $item->id }}"><i class="far fa-trash-alt"></i></button>
+                                                                <!-- <button type="button" class="deleteBtn btn btn-sm btn-danger" value="{{ $item->id }}"><i class="far fa-trash-alt"></i></button> -->
                                                             </td>
                                                         </tr>
                                                         @include('dashboard.company-information.deleteModal')
