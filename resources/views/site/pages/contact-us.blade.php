@@ -3,10 +3,10 @@
 <div class="page-title pt-5">
     <div class="container">
         <div class="padding-tb-120px">
-            <h1>Contact Us</h1>
+            <h1>{{ trans('main.Contact Us') }}</h1>
             <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active">Contact Us</li>
+                <li><a href="#">{{ trans('main.Home') }}</a></li>
+                <li class="active">{{ trans('main.Contact Us') }}</li>
             </ol>
         </div>
     </div>
@@ -19,27 +19,26 @@
         <div class="row">
             <div class="col-lg-6 sm-mb-45px">
                 <p> 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a type specimen book.
+                    {{ $companyInformation->details }}
                 </p>
-                <h5>Phone :</h5>
+                <h5>{{ trans('main.Phone') }} :</h5>
                 <span class="d-block">
                     <i class="fa fa-phone text-main-color margin-right-10px" aria-hidden="true"></i>
-                    +222 333 019
+                    {{ $companyInformation->phone }}
                 </span>
                 <span class="d-block sm-mb-30px">
                     <i class="fa fa-mobile text-main-color margin-right-10px" aria-hidden="true"></i>
-                    +222 333 019
+                    {{ $companyInformation->mobile }}
                 </span>
-                <h5 class="margin-top-20px">Address :</h5>
+                <h5 class="margin-top-20px">{{ trans('main.Address') }} :</h5>
                 <span class="d-block sm-mb-30px">
                     <i class="fa fa-map text-main-color margin-right-10px" aria-hidden="true"></i>
-                    1105 Mansoura Dakahlia - Egypt 
+                    {{ $companyInformation->address }} 
                 </span>
-                <h5 class="margin-top-20px">Email :</h5>
+                <h5 class="margin-top-20px">{{ trans('main.Email') }} :</h5>
                 <span class="d-block sm-mb-30px">
                     <i class="fa fa-envelope-open text-main-color margin-right-10px" aria-hidden="true"></i> 
-                    info@biohealux.com 
+                    {{ $companyInformation->email }}
                 </span>
             </div>
 
@@ -47,27 +46,28 @@
                 <div class="contact-modal">
                     <div class="background-main-color">
                         <div class="padding-30px">
-                            <h3 class="padding-bottom-15px">Contact Us</h3>
-                            <form>
+                            <h3 class="padding-bottom-15px">{{ trans('main.Contact Us') }}</h3>
+                            <form action="{{ route('message.store') }}" method="post">
+                                @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label>Full Name</label>
-                                        <input type="text" class="form-control" id="inputName44" placeholder="Name">
+                                        <label>{{ trans('main.Name') }}</label>
+                                        <input type="text" class="form-control" placeholder="{{ trans('main.Name') }}" name="name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label>Phone Number</label>
-                                        <input type="tel" class="form-control" id="inputEmail44" placeholder="Phone Number">
+                                        <label>{{ trans('main.Phone') }}</label>
+                                        <input type="tel" class="form-control" placeholder="{{ trans('main.Phone') }}" name="phone">
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                        <label>{{ trans('main.Email') }}</label>
+                                        <input type="email" class="form-control" placeholder="{{ trans('main.Email') }}" name="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea11" rows="3"></textarea>
+                                    <label>{{ trans('main.Message') }}</label>
+                                    <textarea class="form-control" rows="3" name="message"></textarea>
                                 </div>
-                                <a href="#" class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">SEND MESSAGE</a>
+                                <button type="submit" class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">{{ trans('main.SEND MESSAGE') }}</button>
                             </form>
                         </div>
                     </div>
@@ -90,23 +90,25 @@
                 <div class="padding-tb-50px padding-lr-30px background-main-color pull-top-309px">
                     <div class="contact-info-map">
                         <div class="margin-bottom-30px">
-                            <h2 class="title">Location</h2>
+                            <h2 class="title">{{ trans('main.Location') }}</h2>
                             <div class="contact-info opacity-9">
                                 <div class="icon margin-top-5px"><span class="icon_pin_alt"></span></div>
                                 <div class="text">
-                                    <span class="title-in">Location :</span> <br>
-                                    <span class="font-weight-500 text-uppercase">Mansoura Dakahlia - Egypt</span>
+                                    <!-- <span class="title-in">{{ trans('main.Location') }} :</span> 
+                                    <br> -->
+                                    <span class="font-weight-500 text-uppercase">{{ $companyInformation->address }}</span>
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div class="call_center margin-top-30px">
-                            <h2 class="title">Call Center</h2>
+                            <h2 class="title">{{ trans('main.Contact Us') }}</h2>
                             <div class="contact-info opacity-9">
                                 <div class="icon  margin-top-5px"><span class="icon_phone"></span></div>
                                 <div class="text">
-                                    <span class="title-in">Call Us :</span><br>
-                                    <span class="font-weight-500 text-uppercase">00222123333019</span>
+                                    <span class="title-in">{{ $companyInformation->mobile }} :</span>
+                                    <br>
+                                    <span class="font-weight-500 text-uppercase">{{ $companyInformation->phone }}</span>
                                 </div>
                             </div>
                         </div>

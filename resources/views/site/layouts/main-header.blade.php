@@ -135,7 +135,7 @@
 								<li class=""><a href="{{ route('site.index') }}#about">{{ trans('main.About') }}</a></li>
 								<li class=""><a href="{{ route('site.index') }}#services">{{ trans('main.Services') }}</a></li>
 								<li class=""><a href="{{ route('site.projects') }}">{{ trans('main.Projects') }}</a></li>
-								<li class=""><a href="{{ route('site.courses') }}">{{ trans('main.Education') }}</a>
+								<li class=""><a href="{{ route('site.courses') }}">{{ trans('main.Courses') }}</a>
 								<li class=""><a href="{{ route('site.contactUs') }}">{{ trans('main.Contact Us') }}</a></li>
 							</ul>
 						</div>

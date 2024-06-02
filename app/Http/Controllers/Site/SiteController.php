@@ -13,7 +13,6 @@ use App\Models\ServiceDetail;
 use App\Models\ServiceItem;
 use App\Models\ProjectDetail;
 use App\Models\ProjectItem;
-use App\Models\ProjectItems;
 use App\Models\CourseItem;
 
 class SiteController extends Controller
@@ -40,15 +39,15 @@ class SiteController extends Controller
 
     public function projects()
     {
-        $projectItems = ProjectItems::latest()->get();
+        $projectItems = ProjectItem::latest()->get();
         return view('site.pages.projects', compact('projectItems'));
     }
 
 
 
-    public function projectItem($request)
+    public function projectItem($name)
     {
-        $projectItem = ProjectItem::where('name_ar', $request->name)->orWhere('name_en', $request->name)->first();
+        $projectItem = ProjectItem::where('name_ar', $name)->orWhere('name_en', $name)->first();
         return view('site.pages.project-item', compact('projectItem'));
     }
 
@@ -56,8 +55,8 @@ class SiteController extends Controller
 
     public function courses()
     {
-        $coursesItems = CourseItem::latest()->get();
-        return view('site.pages.courses', compact('coursesItems'));
+        $courseItems = CourseItem::latest()->get();
+        return view('site.pages.courses', compact('courseItems'));
     }
 
 

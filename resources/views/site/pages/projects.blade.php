@@ -8,7 +8,7 @@
                 <div class="container mx-auto text-center">
                     <div class="padding-30px">
                         <img src="{{ asset('assets_front/assets/img/hello.jpg') }}" alt="">
-                        <h3 class="padding-bottom-15px text-main-color mt-4">COOMING SOON</h3>
+                        <h3 class="padding-bottom-15px text-main-color mt-4">{{ trans('main.Coming Soon') }}</h3>
                     </div>
                 </div>
             </div>
@@ -21,10 +21,10 @@
 <div class="page-title pt-5">
     <div class="container ">
         <div class="padding-tb-120px">
-            <h1>OUR PROJECTS</h1>
+            <h1>{{ trans('main.Our Projects') }}</h1>
             <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active">Our Projects</li>
+                <li><a href="#">{{ trans('main.Home') }}</a></li>
+                <li class="active">{{ trans('main.Our Projects') }}</li>
             </ol>
         </div>
     </div>
@@ -38,137 +38,27 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="icon text-main-color"></div>
-                    <div class="h2">OUR WORK</div>
+                    <div class="h2">{{ trans('main.Our Projects') }}</div>
                 </div>
             </div>
         </div>
         <div class="row">
+            @foreach($projectItems as $projectItem)
             <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
                 <div class="blog-item">
                     <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio1.jpg') }}" alt=""></a>
+                        <a href="{{ route('site.projectItem', $projectItem->name) }}"><img src="{{ asset('attachments/project-item/'.$projectItem->photo) }}" alt=""></a>
                         <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
+                            <span class="day">{{ $projectItem->created_at->format('d') }}</span>
+                            <span class="month">{{ $projectItem->created_at->format('M') }}</span>
                         </a>
                     </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
+                    <a href="{{ route('site.projectItem', $projectItem->name) }}" class="title">
+                        {{ $projectItem->name }}
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio2.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio3.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio1.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio2.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio3.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio1.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio2.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-35px my-lg-5 my-3">
-                <div class="blog-item">
-                    <div class="img">
-                        <a href="work-description.html"><img src="{{ asset('assets_front/assets/img/portfolio3.jpg') }}" alt=""></a>
-                        <a href="#" class="date">
-                            <span class="day">15</span>
-                            <span class="month">April</span>
-                        </a>
-                    </div>
-                    <a href="work-description.html" class="title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem...
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

@@ -523,56 +523,66 @@
             <div class="row">
 
                 <div class="col-lg-6 sm-mb-45px">
+                    @if($companyInformation->details)
                     <p> 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
+                        {{ $companyInformation->details }}
                     </p>
-                    <h5>Phone :</h5>
+                    @endif
+                    @if($companyInformation->phone)
+                    <h5>{{ trans('main.Phone') }} :</h5>
                     <span class="d-block">
                         <i class="fa fa-phone text-main-color margin-right-10px" aria-hidden="true"></i>
                         {{ $companyInformation->phone }}
                     </span>
+                    @endif
+                    @if($companyInformation->mobile)
                     <span class="d-block sm-mb-30px">
-                        <i class="fa fa-mobile text-main-color margin-right-10px"
-                            aria-hidden="true"></i> +222 333 019</span>
-                    <h5 class="margin-top-20px">Address :</h5>
-                    <span class="d-block sm-mb-30px"><i class="fa fa-map text-main-color margin-right-10px"
-                            aria-hidden="true"></i> 1105 Mansoura Dakahlia - Egypt </span>
-                    <h5 class="margin-top-20px">Email :</h5>
-                    <span class="d-block sm-mb-30px"><i class="fa fa-envelope-open text-main-color margin-right-10px"
-                            aria-hidden="true"></i> info@biohealux.com </span>
+                        <i class="fa fa-mobile text-main-color margin-right-10px" aria-hidden="true"></i> 
+                        {{ $companyInformation->mobile }}
+                    </span>
+                    @endif
+                    @if($companyInformation->address)
+                    <h5 class="margin-top-20px">{{ trans('main.Address') }} :</h5>
+                    <span class="d-block sm-mb-30px"><i class="fa fa-map text-main-color margin-right-10px" aria-hidden="true"></i> 
+                        {{ $companyInformation->address }} 
+                    </span>
+                    @endif
+                    @if($companyInformation->email)
+                    <h5 class="margin-top-20px">{{ trans('main.Email') }} :</h5>
+                    <span class="d-block sm-mb-30px"><i class="fa fa-envelope-open text-main-color margin-right-10px" aria-hidden="true"></i> 
+                        {{ $companyInformation->email }} 
+                    </span>
+                    @endif
                 </div>
 
                 <div class="col-lg-6">
                     <div class="contact-modal">
                         <div class="background-main-color">
                             <div class="padding-30px">
-                                <h3 class="padding-bottom-15px">Contact Us</h3>
-                                <form>
+                                <h3 class="padding-bottom-15px">{{ trans('main.Contact Us') }}</h3>
+                                <form action="{{ route('message.store') }}" method="POST">
+                                    @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label>Full Name</label>
-                                            <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                                            <label>{{ trans('main.Name') }}</label>
+                                            <input type="text" class="form-control" placeholder="{{ trans('main.Name') }}" name="name">
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label>Phone Number</label>
-                                            <input type="tel" class="form-control" id="inputEmail44"
-                                                placeholder="Phone Number">
+                                            <label>{{ trans('main.Phone') }}</label>
+                                            <input type="tel" class="form-control" placeholder="{{ trans('main.Phone') }}" name="phone">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Email</label>
-                                            <input type="email" class="form-control" id="inputEmail4"
-                                                placeholder="Email">
+                                            <label>{{ trans('main.Email') }}</label>
+                                            <input type="email" class="form-control" placeholder="{{ trans('main.Email') }}" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Message</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea11"
-                                            rows="3"></textarea>
+                                        <label>{{ trans('main.Message') }}</label>
+                                        <textarea class="form-control" rows="3" name="message"></textarea>
                                     </div>
-                                    <a href="#"
-                                        class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">SEND
-                                        MESSAGE</a>
+                                    <button type="submit" class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">
+                                        {{ trans('main.SEND MESSAGE') }}
+                                    </button>
                                 </form>
                             </div>
                         </div>
