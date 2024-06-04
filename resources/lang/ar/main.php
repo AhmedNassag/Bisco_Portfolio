@@ -1,6 +1,7 @@
 <?php
 
 return [
+    /****************************** Start Dashboard ******************************/
     //General
     'Welcome Back'    => 'مرحباً بعودتك',
     'Register'        => 'تسجيل جديد',
@@ -91,6 +92,7 @@ return [
     'Answer'          => 'الإجابة',
 
     //Our Services
+    'Services' => 'الخدمات',
     'Our Services' => 'خدماتنا',
 
     //Service Detail
@@ -122,6 +124,11 @@ return [
     'Course Items' => 'العناصر',
     'Author'       => 'المحاضر',
 
+    //Our Parteners
+    'Parteners' => 'الشركاء',
+    'Our Parteners' => 'شركائنا',
+    'Url' => 'الرابط',
+
     //Company Informations
     'Company Informations' => 'معلومات الشركة',
     'Address'              => 'العنوان',
@@ -139,4 +146,22 @@ return [
     'Message'  => 'الرسالة',
     'Messages' =>'الرسائل',
     'Phone'    => 'رقم التليفون',
+    /****************************** End Dashboard ******************************/
+
+
+
+
+
+    /****************************** Start Site ******************************/
+    'Contact Us' => 'تواصل معنا',
+    'Projects' => 'مشاريعنا',
+    'About' => 'عن الشركة',
+    'Get A Call' => 'اتصل بنا',
+    'Who We Are ?' => 'من نحن ؟',
+    'Our Service' => 'خدماتنا',
+    'Show More' => 'عرض المزيد',
+    'Our Parteners' => 'شركائنا',
+    'SEND MESSAGE' => 'إرسال رسالة',
+    'Location' => 'الموقع',
+    /****************************** End Site ******************************/
 ];

@@ -11,6 +11,7 @@ return [
     'Email Or Mobile' => 'Email Or Mobile',
     'Remember Me'     => 'Remember Me',
     'Dashboard'       => 'Dashboard',
+    'Home'            => 'Home',
     'Main'            => 'Main',
     'Index'           => 'Index',
     'General'         => 'General',
@@ -93,6 +94,7 @@ return [
     'Answer'          => 'Answer',
 
     //Our Services
+    'Services' => 'Services',
     'Our Services' => 'Our Services',
 
     //Service Details
@@ -104,8 +106,8 @@ return [
     'Service Items' => 'Items',
 
     //Projects
-    'Services'     => 'Projects',
-    'Our Services' => 'Our Projects',
+    'Projects'     => 'Projects',
+    'Our Projects' => 'Our Projects',
 
     //Project Details
     'Project Detail'  => 'Berief',
@@ -124,6 +126,11 @@ return [
     'Course Items' => 'Items',
     'Author'       => 'Author',
 
+    //Our Parteners
+    'Parteners' => 'Parteners',
+    'Our Parteners' => 'Our Parteners',
+    'Url' => 'Url',
+
     //Company Informations
     'Company Informations' => 'Company Informations',
     'Address'              => 'Address',
@@ -141,4 +148,22 @@ return [
     'Message'  => 'Message',
     'Messages' =>'Messages',
     'Phone'    => 'Phone',
+    /****************************** End Dashboard ******************************/
+
+
+
+
+
+    /****************************** Start Site ******************************/
+    'Contact Us' => 'Contact Us',
+    'Projects' => 'Projects',
+    'About' => 'About',
+    'Get A Call' => 'Get A Call',
+    'Who We Are ?' => 'Who We Are ?',
+    'Our Service' => 'Our Service',
+    'Show More' => 'Show More',
+    'Our Parteners' => 'Our Parteners',
+    'SEND MESSAGE' => 'SEND MESSAGE',
+    'Location' => 'Location',
+    /****************************** End Site ******************************/
 ];

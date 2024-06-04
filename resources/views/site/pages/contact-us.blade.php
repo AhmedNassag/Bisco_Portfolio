@@ -47,7 +47,7 @@
                     <div class="background-main-color">
                         <div class="padding-30px">
                             <h3 class="padding-bottom-15px">{{ trans('main.Contact Us') }}</h3>
-                            <form action="{{ route('message.store') }}" method="post">
+                            <form action="{{ route('site.send-message') }}" method="post">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">

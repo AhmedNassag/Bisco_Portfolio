@@ -41,52 +41,6 @@ class MessageController extends Controller
 
 
 
-    public function store(Request $request)
-    {
-        try {
-            $validator = Validator::make($request->all(),[
-                'name'    => 'required|string',
-                'phone'   => 'required|numeric',
-                'email'   => 'required|email',
-                'message' => 'required|string',
-            ]);
-            if($validator->fails())
-            {
-                return response()->json([
-                    'status'   => false,
-                    'messages' => $validator->messages(),
-                ]);
-            }
-            //insert data
-            $message = Message::create([
-                'name'    => $request->name,
-                'phone'   => $request->phone,
-                'email'   => $request->email,
-                'message' => $request->message,
-            ]);
-            if (!$message) {
-                session()->flash('error');
-                return response()->json([
-                    'status'   => false,
-                    'messages' => 'لقد حدث خطأ ما برجاء المحاولة مجدداً',
-                ]);
-            }
-            //send notification
-            $users = User::select('id','name')->get();
-            Notification::send($users, new MessageAdded($message->id));
-
-            session()->flash('success');
-            return response()->json([
-                'status'   => true,
-                'messages' => 'تم الحفظ بنجاح',
-            ]);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
-    }
-
-
-
     public function destroy(Request $request)
     {
         try {

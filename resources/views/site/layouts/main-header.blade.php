@@ -129,12 +129,11 @@
 							</a>
 						</div>
 						<div class="col-lg-7 col-md-12 position-inherit text-lg-center">
-							<ul id="menu-main"
-								class="nav-menu float-xl-left text-lg-center link-padding-tb-25px white-link dropdown-dark">
+							<ul id="menu-main" class="nav-menu float-xl-left text-lg-center link-padding-tb-25px white-link dropdown-dark">
 								<li class=""><a href="{{ route('site.index') }}">{{ trans('main.Home') }}</a></li>
 								<li class=""><a href="{{ route('site.index') }}#about">{{ trans('main.About') }}</a></li>
-								<li class=""><a href="{{ route('site.index') }}#services">{{ trans('main.Services') }}</a></li>
-								<li class=""><a href="{{ route('site.projects') }}">{{ trans('main.Projects') }}</a></li>
+								<li class=""><a href="{{ route('site.index') }}#services">{{ trans('main.Our Services') }}</a></li>
+								<li class=""><a href="{{ route('site.projects') }}">{{ trans('main.Our Projects') }}</a></li>
 								<li class=""><a href="{{ route('site.courses') }}">{{ trans('main.Courses') }}</a>
 								<li class=""><a href="{{ route('site.contactUs') }}">{{ trans('main.Contact Us') }}</a></li>
 							</ul>

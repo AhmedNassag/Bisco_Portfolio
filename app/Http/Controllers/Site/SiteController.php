@@ -14,25 +14,36 @@ use App\Models\ServiceItem;
 use App\Models\ProjectDetail;
 use App\Models\ProjectItem;
 use App\Models\CourseItem;
+use App\Models\Partener;
+use App\Models\User;
+use App\Models\Message;
+use Illuminate\Support\Facades\DB;
+use App\Notifications\MessageAdded;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Notification;
+use App\Models\Notification as NotificationModel;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        $slider         = Slider::latest()->get();
-        $sliderFooter   = SliderFooter::latest()->get()->take(3);
+        $sliders        = Slider::latest()->get();
+        $sliderFooters  = SliderFooter::latest()->get()->take(3);
         
         $whoWeAreDetail = WhoWeAreDetail::first();
-        $whoWeAreSides  = WhoWeAreSide::latest()->get()->take(4);
         $whoWeAreFaqs   = WhoWeAreFaq::latest()->get();
+        $whoWeAreSides  = WhoWeAreSide::latest()->get()->take(4);
         
         $serviceDetail  = ServiceDetail::first();
         $serviceItems   = ServiceItem::latest()->get()->take(3);
         
         $projectDetail  = ProjectDetail::first();
         $projectItems   = ProjectItem::latest()->get()->take(3);
+
+        $parteners      = Partener::latest()->get();
         
-        return view('site.pages.index', compact(['slider','sliderFooter','whoWeAreDetail','whoWeAreSides','whoWeAreFaqs','serviceDetail','serviceItems','projectDetail','projectItems']));
+        return view('site.pages.index', compact(['sliders','sliderFooters','whoWeAreDetail','whoWeAreSides','whoWeAreFaqs','serviceDetail','serviceItems','projectDetail','projectItems','parteners']));
     }
 
 
@@ -64,5 +75,87 @@ class SiteController extends Controller
     public function contactUs()
     {
         return view('site.pages.contact-us');
+    }
+
+
+
+    /*
+    public function sendMessage(Request $request)
+    {
+        try {
+            $validator = Validator::make($request->all(),[
+                'name'    => 'required|string',
+                'phone'   => 'required|numeric',
+                'email'   => 'required|email',
+                'message' => 'required|string',
+            ]);
+            if($validator->fails())
+            {
+                return response()->json([
+                    'status'   => false,
+                    'messages' => $validator->messages(),
+                ]);
+            }
+            //insert data
+            $message = Message::create([
+                'name'    => $request->name,
+                'phone'   => $request->phone,
+                'email'   => $request->email,
+                'message' => $request->message,
+            ]);
+            if (!$message) {
+                session()->flash('error');
+                return redirect()->back();
+            }
+            //send notification
+            $users = User::select('id','name')->get();
+            Notification::send($users, new MessageAdded($message->id));
+
+            session()->flash('success');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
+    }
+    */
+    public function sendMessage(Request $request)
+    {
+        try {
+            $validator = Validator::make($request->all(), [
+                'name'    => 'required|string',
+                'phone'   => 'required|numeric',
+                'email'   => 'required|email',
+                'message' => 'required|string',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status'   => false,
+                    'messages' => $validator->messages(),
+                ], 422); // 422 Unprocessable Entity
+            }
+
+            // Insert data
+            $message = Message::create([
+                'name'    => $request->name,
+                'phone'   => $request->phone,
+                'email'   => $request->email,
+                'message' => $request->message,
+            ]);
+
+            if (!$message) {
+                session()->flash('error', 'Failed to save the message.');
+                return redirect()->back();
+            }
+
+            // Send notification
+            $users = User::select('id', 'name')->get();
+            Notification::send($users, new MessageAdded($message->id));
+
+            session()->flash('success', 'Message sent successfully!');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 }

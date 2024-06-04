@@ -24,7 +24,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::TWvO1Z6wDRF3bLfz',
+            '_route' => 'generated::bXmULvumof9v0IVo',
           ),
           1 => NULL,
           2 => 
@@ -44,7 +44,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::0ld2a6eggOyyPhwG',
+            '_route' => 'generated::W86cWl8zYbqg63l5',
           ),
           1 => NULL,
           2 => 
@@ -81,7 +81,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::vwXlZGIBVfdvIep8',
+            '_route' => 'generated::Yt4RUVvAwDplTa4V',
           ),
           1 => NULL,
           2 => 
@@ -191,7 +191,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::aFP2PgTfo3ZpWull',
+            '_route' => 'generated::8mtn2xTBj9xQarMH',
           ),
           1 => NULL,
           2 => 
@@ -1376,6 +1376,102 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/admin/partener' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/partener/store' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/partener/update' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.update',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/partener/destroy' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.destroy',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/partenerDeleteSelected' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.deleteSelected',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/admin/company-information' => 
       array (
         0 => 
@@ -1610,13 +1706,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/message/store' => 
+      '/send-message' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'message.store',
+            '_route' => 'site.send-message',
           ),
           1 => NULL,
           2 => 
@@ -1672,7 +1768,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/p(?|assword/reset/([^/]++)(*:34)|roject\\-item/([^/]++)(*:62))|/admin/(?|role/([^/]++)(?|(*:96)|/edit(*:108)|(*:116))|user(?|/(?|edit/([^/]++)(*:149)|destroy/([^/]++)(*:173))|ShowNotification/([^/]++)(*:207)|ChangeStatus/([^/]++)(*:236))|s(?|lider(?|/edit/([^/]++)(*:271)|ShowNotification/([^/]++)/([^/]++)(*:313)|\\-footer(?|/edit/([^/]++)(*:346)|ShowNotification/([^/]++)/([^/]++)(*:388)))|ervice\\-(?|detail(?|/edit/([^/]++)(*:432)|ShowNotification/([^/]++)/([^/]++)(*:474))|item(?|/edit/([^/]++)(*:504)|ShowNotification/([^/]++)/([^/]++)(*:546))))|who\\-we\\-are\\-(?|detail(?|/edit/([^/]++)(*:597)|ShowNotification/([^/]++)/([^/]++)(*:639))|side(?|/edit/([^/]++)(*:669)|ShowNotification/([^/]++)/([^/]++)(*:711))|faq(?|/edit/([^/]++)(*:740)|ShowNotification/([^/]++)/([^/]++)(*:782)))|project\\-(?|detail(?|/edit/([^/]++)(*:827)|ShowNotification/([^/]++)/([^/]++)(*:869))|item(?|/edit/([^/]++)(*:899)|ShowNotification/([^/]++)/([^/]++)(*:941)))|co(?|urse\\-item(?|/edit/([^/]++)(*:983)|ShowNotification/([^/]++)/([^/]++)(*:1025))|mpany\\-information(?|/edit/([^/]++)(*:1070)|ShowNotification/([^/]++)/([^/]++)(*:1113)))|messageShowNotification/([^/]++)/([^/]++)(*:1165))|/show_file/([^/]++)/([^/]++)(*:1203)|/download_file/([^/]++)/([^/]++)(*:1244))/?$}sDu',
+      0 => '{^(?|/p(?|assword/reset/([^/]++)(*:34)|roject\\-item/([^/]++)(*:62))|/admin/(?|role/([^/]++)(?|(*:96)|/edit(*:108)|(*:116))|user(?|/(?|edit/([^/]++)(*:149)|destroy/([^/]++)(*:173))|ShowNotification/([^/]++)(*:207)|ChangeStatus/([^/]++)(*:236))|s(?|lider(?|/edit/([^/]++)(*:271)|ShowNotification/([^/]++)/([^/]++)(*:313)|\\-footer(?|/edit/([^/]++)(*:346)|ShowNotification/([^/]++)/([^/]++)(*:388)))|ervice\\-(?|detail(?|/edit/([^/]++)(*:432)|ShowNotification/([^/]++)/([^/]++)(*:474))|item(?|/edit/([^/]++)(*:504)|ShowNotification/([^/]++)/([^/]++)(*:546))))|who\\-we\\-are\\-(?|detail(?|/edit/([^/]++)(*:597)|ShowNotification/([^/]++)/([^/]++)(*:639))|side(?|/edit/([^/]++)(*:669)|ShowNotification/([^/]++)/([^/]++)(*:711))|faq(?|/edit/([^/]++)(*:740)|ShowNotification/([^/]++)/([^/]++)(*:782)))|p(?|roject\\-(?|detail(?|/edit/([^/]++)(*:830)|ShowNotification/([^/]++)/([^/]++)(*:872))|item(?|/edit/([^/]++)(*:902)|ShowNotification/([^/]++)/([^/]++)(*:944)))|artener(?|/edit/([^/]++)(*:978)|ShowNotification/([^/]++)/([^/]++)(*:1020)))|co(?|urse\\-item(?|/edit/([^/]++)(*:1063)|ShowNotification/([^/]++)/([^/]++)(*:1106))|mpany\\-information(?|/edit/([^/]++)(*:1151)|ShowNotification/([^/]++)/([^/]++)(*:1194)))|messageShowNotification/([^/]++)/([^/]++)(*:1246))|/show_file/([^/]++)/([^/]++)(*:1284)|/download_file/([^/]++)/([^/]++)(*:1325))/?$}sDu',
     ),
     3 => 
     array (
@@ -2230,7 +2326,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      827 => 
+      830 => 
       array (
         0 => 
         array (
@@ -2253,7 +2349,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      869 => 
+      872 => 
       array (
         0 => 
         array (
@@ -2277,7 +2373,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      899 => 
+      902 => 
       array (
         0 => 
         array (
@@ -2300,7 +2396,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      941 => 
+      944 => 
       array (
         0 => 
         array (
@@ -2324,7 +2420,54 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      983 => 
+      978 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.edit',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1020 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'partener.showNotification',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+            1 => 'notification_id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1063 => 
       array (
         0 => 
         array (
@@ -2347,7 +2490,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1025 => 
+      1106 => 
       array (
         0 => 
         array (
@@ -2371,7 +2514,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1070 => 
+      1151 => 
       array (
         0 => 
         array (
@@ -2394,7 +2537,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1113 => 
+      1194 => 
       array (
         0 => 
         array (
@@ -2418,7 +2561,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1165 => 
+      1246 => 
       array (
         0 => 
         array (
@@ -2442,7 +2585,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1203 => 
+      1284 => 
       array (
         0 => 
         array (
@@ -2466,7 +2609,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1244 => 
+      1325 => 
       array (
         0 => 
         array (
@@ -2505,7 +2648,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::TWvO1Z6wDRF3bLfz' => 
+    'generated::bXmULvumof9v0IVo' => 
     array (
       'methods' => 
       array (
@@ -2526,7 +2669,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::TWvO1Z6wDRF3bLfz',
+        'as' => 'generated::bXmULvumof9v0IVo',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2542,7 +2685,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::0ld2a6eggOyyPhwG' => 
+    'generated::W86cWl8zYbqg63l5' => 
     array (
       'methods' => 
       array (
@@ -2559,13 +2702,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004ae0000000000000000";}";s:4:"hash";s:44:"ysi4CjxEOL2MfOglrWNmzbw1XTfpS5RaB5L5mgN8HUo=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c00000000000000000";}";s:4:"hash";s:44:"ajvtdzvW1zkJ8BVuPqaCwGQAQ+GIEQSy6DxvS0iu1/g=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::0ld2a6eggOyyPhwG',
+        'as' => 'generated::W86cWl8zYbqg63l5',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2618,7 +2761,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::vwXlZGIBVfdvIep8' => 
+    'generated::Yt4RUVvAwDplTa4V' => 
     array (
       'methods' => 
       array (
@@ -2638,7 +2781,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::vwXlZGIBVfdvIep8',
+        'as' => 'generated::Yt4RUVvAwDplTa4V',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2873,7 +3016,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::aFP2PgTfo3ZpWull' => 
+    'generated::8mtn2xTBj9xQarMH' => 
     array (
       'methods' => 
       array (
@@ -2893,7 +3036,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::aFP2PgTfo3ZpWull',
+        'as' => 'generated::8mtn2xTBj9xQarMH',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6331,6 +6474,275 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'partener.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/partener',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@index',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@index',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/partener/store',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@store',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@store',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.store',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/partener/edit/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@edit',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@edit',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.edit',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/partener/update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@update',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@update',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.update',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/partener/destroy',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.destroy',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.deleteSelected' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/partenerDeleteSelected',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@deleteSelected',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@deleteSelected',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.deleteSelected',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'partener.showNotification' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/partenerShowNotification/{id}/{notification_id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'lang',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@showNotification',
+        'controller' => 'App\\Http\\Controllers\\Dashboard\\PartenerController@showNotification',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'partener.showNotification',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'company-information.index' => 
     array (
       'methods' => 
@@ -6767,8 +7179,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
+          1 => 'lang',
         ),
         'uses' => 'App\\Http\\Controllers\\Site\\SiteController@index',
         'controller' => 'App\\Http\\Controllers\\Site\\SiteController@index',
@@ -6806,8 +7217,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
+          1 => 'lang',
         ),
         'uses' => 'App\\Http\\Controllers\\Site\\SiteController@projects',
         'controller' => 'App\\Http\\Controllers\\Site\\SiteController@projects',
@@ -6845,8 +7255,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
+          1 => 'lang',
         ),
         'uses' => 'App\\Http\\Controllers\\Site\\SiteController@projectItem',
         'controller' => 'App\\Http\\Controllers\\Site\\SiteController@projectItem',
@@ -6884,8 +7293,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
+          1 => 'lang',
         ),
         'uses' => 'App\\Http\\Controllers\\Site\\SiteController@courses',
         'controller' => 'App\\Http\\Controllers\\Site\\SiteController@courses',
@@ -6923,8 +7331,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
+          1 => 'lang',
         ),
         'uses' => 'App\\Http\\Controllers\\Site\\SiteController@contactUs',
         'controller' => 'App\\Http\\Controllers\\Site\\SiteController@contactUs',
@@ -6949,27 +7356,28 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'message.store' => 
+    'site.send-message' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'message/store',
+      'uri' => 'send-message',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'lang',
         ),
-        'uses' => 'App\\Http\\Controllers\\Dashboard\\MessageController@store',
-        'controller' => 'App\\Http\\Controllers\\Dashboard\\MessageController@store',
+        'uses' => 'App\\Http\\Controllers\\Site\\SiteController@sendMessage',
+        'controller' => 'App\\Http\\Controllers\\Site\\SiteController@sendMessage',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'message.store',
+        'as' => 'site.send-message',
       ),
       'fallback' => false,
       'defaults' => 

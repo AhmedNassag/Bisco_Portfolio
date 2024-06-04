@@ -71,6 +71,17 @@
 
 
 
+				<!-- Parteners -->
+				<li class="menu-title"><span>{{ trans('main.Parteners') }}</span></li>
+				<li class="{{ Request::is('admin/partener') ? 'active' : '' }} submenu">
+					<a href="#"><i data-feather="copy"></i> <span>{{ trans('main.Our Parteners') }}</span> <span class="menu-arrow"></span></a>
+					<ul>
+						<li class="ml-1"><a class=" {{ Request::is('admin/partener') ? 'active' : '' }}" href="{{ route('partener.index') }}">{{ trans('main.Parteners') }}</a></li>
+					</ul>
+				</li>
+
+
+
 				<!-- Messages -->
 				<li class="menu-title"><span>{{ trans('main.Messages') }}</span></li>
 				<li class="{{ Request::is('/admin/message') ? 'active' : '' }}">

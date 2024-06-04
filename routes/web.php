@@ -19,6 +19,7 @@ use App\Http\Controllers\Dashboard\ServiceItemController;
 use App\Http\Controllers\Dashboard\ProjectDetailController;
 use App\Http\Controllers\Dashboard\ProjectItemController;
 use App\Http\Controllers\Dashboard\CourseItemController;
+use App\Http\Controllers\Dashboard\PartenerController;
 use App\Http\Controllers\Dashboard\CompanyInformationController;
 use App\Http\Controllers\Dashboard\MessageController;
 
@@ -174,7 +175,18 @@ Route::Group(['prefix' => 'admin', 'middleware' => ['auth','lang']], function ()
     Route::delete('course-itemDeleteSelected', [CourseItemController::class, 'deleteSelected'])->name('course-item.deleteSelected');
     Route::get('course-itemShowNotification/{id}/{notification_id}', [CourseItemController::class, 'showNotification'])->name('course-item.showNotification');
 
+
     
+    //partener
+    Route::get('partener', [PartenerController::class, 'index'])->name('partener.index');
+    Route::post('partener/store', [PartenerController::class, 'store'])->name('partener.store');
+    Route::get('partener/edit/{id}', [PartenerController::class, 'edit'])->name('partener.edit');
+    Route::post('partener/update', [PartenerController::class, 'update'])->name('partener.update');
+    Route::delete('partener/destroy', [PartenerController::class, 'destroy'])->name('partener.destroy');
+    Route::delete('partenerDeleteSelected', [PartenerController::class, 'deleteSelected'])->name('partener.deleteSelected');
+    Route::get('partenerShowNotification/{id}/{notification_id}', [PartenerController::class, 'showNotification'])->name('partener.showNotification');
+
+
 
     //company-information
     Route::get('company-information', [CompanyInformationController::class, 'index'])->name('company-information.index');
@@ -201,14 +213,15 @@ Route::Group(['prefix' => 'admin', 'middleware' => ['auth','lang']], function ()
 
 
 /****************************** Start Site Routes ******************************/
-Route::Group(['middleware' => ['auth','lang']], function () { 
+Route::Group(['middleware' => ['lang']], function () { 
     Route::get('/', [SiteController::class,'index'])->name('site.index');
     Route::get('projects', [SiteController::class,'projects'])->name('site.projects');
     Route::get('project-item/{name}', [SiteController::class,'projectItem'])->name('site.projectItem');
     Route::get('courses', [SiteController::class,'courses'])->name('site.courses');
     Route::get('contact-us', [SiteController::class,'contactUs'])->name('site.contactUs');
+    // Route::post('send-message', [SiteController::class, 'sendMessage'])->name('site.send-message');
+    Route::post('send-message', [SiteController::class, 'sendMessage'])->name('site.send-message');
 });
-Route::post('message/store', [MessageController::class, 'store'])->name('message.store');
 /****************************** End Site Routes ******************************/
 
 
