@@ -47,28 +47,73 @@
                     <div class="background-main-color">
                         <div class="padding-30px">
                             <h3 class="padding-bottom-15px">{{ trans('main.Contact Us') }}</h3>
-                            <form action="{{ route('site.send-message') }}" method="post">
+                            <!-- start contact form -->
+                            <form id="contactForm" action="{{ route('site.send-message') }}" method="POST">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>{{ trans('main.Name') }}</label>
-                                        <input type="text" class="form-control" placeholder="{{ trans('main.Name') }}" name="name">
+                                        <input type="text" class="form-control" placeholder="{{ trans('main.Name') }}" name="name" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>{{ trans('main.Phone') }}</label>
-                                        <input type="tel" class="form-control" placeholder="{{ trans('main.Phone') }}" name="phone">
+                                        <input type="tel" class="form-control" placeholder="{{ trans('main.Phone') }}" name="phone" required>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label>{{ trans('main.Email') }}</label>
-                                        <input type="email" class="form-control" placeholder="{{ trans('main.Email') }}" name="email">
+                                        <input type="email" class="form-control" placeholder="{{ trans('main.Email') }}" name="email" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>{{ trans('main.Message') }}</label>
-                                    <textarea class="form-control" rows="3" name="message"></textarea>
+                                    <textarea class="form-control" rows="3" name="message" required></textarea>
                                 </div>
-                                <button type="submit" class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">{{ trans('main.SEND MESSAGE') }}</button>
+                                <button type="submit" class="btn-sm btn-lg btn-block background-dark text-white text-center text-uppercase rounded-0 padding-15px">
+                                    {{ trans('main.SEND MESSAGE') }}
+                                </button>
                             </form>
+                                                            
+                            <script>
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+                                    let formData = new FormData(this);
+                                    
+                                    fetch('{{ route('site.send-message') }}', {
+                                        method: 'POST',
+                                        headers: {
+                                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                                        },
+                                        body: formData
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.status) {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: '{{ trans('main.Success') }}',
+                                                text: '{{ trans('main.MessageSent') }}',
+                                            });
+                                        } else {
+                                            Swal.fire({
+                                                icon: 'error',
+                                                title: '{{ trans('main.Error') }}',
+                                                text: '{{ trans('main.ValidationError') }}',
+                                                footer: data.messages ? Object.values(data.messages).join('<br>') : ''
+                                            });
+                                        }
+                                    })
+                                    .catch(error => {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: '{{ trans('main.Error') }}',
+                                            text: '{{ trans('main.ServerError') }}',
+                                        });
+                                        console.error('Error:', error);
+                                    });
+                                });
+                            </script>
+                            <!-- end contact form -->
                         </div>
                     </div>
                 </div>

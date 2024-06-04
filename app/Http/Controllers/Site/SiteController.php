@@ -78,46 +78,7 @@ class SiteController extends Controller
     }
 
 
-
-    /*
-    public function sendMessage(Request $request)
-    {
-        try {
-            $validator = Validator::make($request->all(),[
-                'name'    => 'required|string',
-                'phone'   => 'required|numeric',
-                'email'   => 'required|email',
-                'message' => 'required|string',
-            ]);
-            if($validator->fails())
-            {
-                return response()->json([
-                    'status'   => false,
-                    'messages' => $validator->messages(),
-                ]);
-            }
-            //insert data
-            $message = Message::create([
-                'name'    => $request->name,
-                'phone'   => $request->phone,
-                'email'   => $request->email,
-                'message' => $request->message,
-            ]);
-            if (!$message) {
-                session()->flash('error');
-                return redirect()->back();
-            }
-            //send notification
-            $users = User::select('id','name')->get();
-            Notification::send($users, new MessageAdded($message->id));
-
-            session()->flash('success');
-            return redirect()->back();
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
-    }
-    */
+    
     public function sendMessage(Request $request)
     {
         try {
@@ -127,14 +88,13 @@ class SiteController extends Controller
                 'email'   => 'required|email',
                 'message' => 'required|string',
             ]);
-
+    
             if ($validator->fails()) {
                 return response()->json([
                     'status'   => false,
                     'messages' => $validator->messages(),
-                ], 422); // 422 Unprocessable Entity
+                ]);
             }
-
             // Insert data
             $message = Message::create([
                 'name'    => $request->name,
@@ -142,20 +102,25 @@ class SiteController extends Controller
                 'email'   => $request->email,
                 'message' => $request->message,
             ]);
-
             if (!$message) {
-                session()->flash('error', 'Failed to save the message.');
-                return redirect()->back();
+                return response()->json([
+                    'status' => false,
+                    'messages' => ['error' => 'Failed to save message.']
+                ]);
             }
-
             // Send notification
             $users = User::select('id', 'name')->get();
             Notification::send($users, new MessageAdded($message->id));
-
-            session()->flash('success', 'Message sent successfully!');
-            return redirect()->back();
+            return response()->json([
+                'status' => true,
+                'message' => 'Message sent successfully!'
+            ]);
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+            return response()->json([
+                'status' => false,
+                'messages' => ['error' => $e->getMessage()]
+            ]);
         }
     }
+    
 }

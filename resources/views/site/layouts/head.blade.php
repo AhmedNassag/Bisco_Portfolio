@@ -33,6 +33,7 @@
     <script src="{{ asset('assets_front/assets/js/jquery-3.2.1.min.js') }}"></script>
     <!-- fontawesome  -->
 	<link rel="stylesheet" href="{{ asset('assets_front/assets/fonts/font-awesome/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     
 @else
 	
@@ -67,6 +68,7 @@
     <script src="{{ asset('assets_front/assets/js/jquery-3.2.1.min.js') }}"></script>
     <!-- fontawesome  -->
     <link rel="stylesheet" href="{{ asset('assets_front/assets/fonts/font-awesome/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 @endif
 
 

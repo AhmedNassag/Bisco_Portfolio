@@ -155,15 +155,19 @@ return [
 
 
     /****************************** Start Site ******************************/
-    'Contact Us' => 'Contact Us',
-    'Projects' => 'Projects',
-    'About' => 'About',
-    'Get A Call' => 'Get A Call',
-    'Who We Are ?' => 'Who We Are ?',
-    'Our Service' => 'Our Service',
-    'Show More' => 'Show More',
-    'Our Parteners' => 'Our Parteners',
-    'SEND MESSAGE' => 'SEND MESSAGE',
-    'Location' => 'Location',
+    'Contact Us'      => 'Contact Us',
+    'Projects'        => 'Projects',
+    'About'           => 'About',
+    'Get A Call'      => 'Get A Call',
+    'Who We Are ?'    => 'Who We Are ?',
+    'Our Service'     => 'Our Service',
+    'Show More'       => 'Show More',
+    'Our Parteners'   => 'Our Parteners',
+    'SEND MESSAGE'    => 'SEND MESSAGE',
+    'Location'        => 'Location','Success' => 'Success',
+    'MessageSent'     => 'Your message has been sent successfully.',
+    'Error'           => 'Error',
+    'ValidationError' => 'There were validation errors.',
+    'ServerError'     => 'There was a server error.',
     /****************************** End Site ******************************/
 ];
