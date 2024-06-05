@@ -123,6 +123,8 @@ return [
     'Course Item'  => 'العنصر',
     'Course Items' => 'العناصر',
     'Author'       => 'المحاضر',
+    'Course Title' => 'غنوان المحاضرة',
+    'By'           => 'بواسطة',
 
     //Our Parteners
     'Parteners' => 'الشركاء',

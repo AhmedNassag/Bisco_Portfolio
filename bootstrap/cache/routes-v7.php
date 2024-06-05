@@ -24,7 +24,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::bXmULvumof9v0IVo',
+            '_route' => 'generated::W1ktIdnSjmTeDzPn',
           ),
           1 => NULL,
           2 => 
@@ -44,7 +44,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::W86cWl8zYbqg63l5',
+            '_route' => 'generated::farRF6lWut5K98wT',
           ),
           1 => NULL,
           2 => 
@@ -81,7 +81,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Yt4RUVvAwDplTa4V',
+            '_route' => 'generated::AoEjERv0emmdQadz',
           ),
           1 => NULL,
           2 => 
@@ -191,7 +191,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8mtn2xTBj9xQarMH',
+            '_route' => 'generated::qdh9KRanqajT1hLm',
           ),
           1 => NULL,
           2 => 
@@ -211,46 +211,6 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'home',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/admin/lang/ar' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'lang.ar',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/admin/lang/en' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'lang.en',
           ),
           1 => NULL,
           2 => 
@@ -1725,6 +1685,46 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/lang/ar' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'lang.ar',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/lang/en' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'lang.en',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/allNotifications' => 
       array (
         0 => 
@@ -2648,7 +2648,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::bXmULvumof9v0IVo' => 
+    'generated::W1ktIdnSjmTeDzPn' => 
     array (
       'methods' => 
       array (
@@ -2669,7 +2669,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::bXmULvumof9v0IVo',
+        'as' => 'generated::W1ktIdnSjmTeDzPn',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2685,7 +2685,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::W86cWl8zYbqg63l5' => 
+    'generated::farRF6lWut5K98wT' => 
     array (
       'methods' => 
       array (
@@ -2708,7 +2708,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::W86cWl8zYbqg63l5',
+        'as' => 'generated::farRF6lWut5K98wT',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2761,7 +2761,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Yt4RUVvAwDplTa4V' => 
+    'generated::AoEjERv0emmdQadz' => 
     array (
       'methods' => 
       array (
@@ -2781,7 +2781,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Yt4RUVvAwDplTa4V',
+        'as' => 'generated::AoEjERv0emmdQadz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3016,7 +3016,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8mtn2xTBj9xQarMH' => 
+    'generated::qdh9KRanqajT1hLm' => 
     array (
       'methods' => 
       array (
@@ -3036,7 +3036,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8mtn2xTBj9xQarMH',
+        'as' => 'generated::qdh9KRanqajT1hLm',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3074,84 +3074,6 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'home',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'lang.ar' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'admin/lang/ar',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
-        ),
-        'uses' => 'App\\Http\\Controllers\\LangController@ar',
-        'controller' => 'App\\Http\\Controllers\\LangController@ar',
-        'as' => 'lang.ar',
-        'namespace' => NULL,
-        'prefix' => 'admin/lang',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'lang.en' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'admin/lang/en',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'lang',
-        ),
-        'uses' => 'App\\Http\\Controllers\\LangController@en',
-        'controller' => 'App\\Http\\Controllers\\LangController@en',
-        'as' => 'lang.en',
-        'namespace' => NULL,
-        'prefix' => 'admin/lang',
-        'where' => 
-        array (
-        ),
       ),
       'fallback' => false,
       'defaults' => 
@@ -7378,6 +7300,80 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'site.send-message',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'lang.ar' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'lang/ar',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LangController@ar',
+        'controller' => 'App\\Http\\Controllers\\LangController@ar',
+        'as' => 'lang.ar',
+        'namespace' => NULL,
+        'prefix' => '/lang',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'lang.en' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'lang/en',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LangController@en',
+        'controller' => 'App\\Http\\Controllers\\LangController@en',
+        'as' => 'lang.en',
+        'namespace' => NULL,
+        'prefix' => '/lang',
+        'where' => 
+        array (
+        ),
       ),
       'fallback' => false,
       'defaults' => 

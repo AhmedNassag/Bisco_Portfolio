@@ -125,6 +125,8 @@ return [
     'Course Item'  => 'Item',
     'Course Items' => 'Items',
     'Author'       => 'Author',
+    'Course Title' => 'Course Title',
+    'By'           => 'By',
 
     //Our Parteners
     'Parteners' => 'Parteners',

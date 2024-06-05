@@ -3,10 +3,10 @@
 <div class="page-title pt-5">
     <div class="container">
         <div class="padding-tb-120px">
-            <h1>{{ trans('main.Project') }}</h1>
+            <h1>{{ trans('main.Our Projects') }}</h1>
             <ol class="breadcrumb">
                 <li><a href="#">{{ trans('main.Home') }}</a></li>
-                <li class="active">{{ trans('main.Project') }}</li>
+                <li class="active">{{ trans('main.Our Projects') }}</li>
             </ol>
         </div>
     </div>

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url('public/assets_front/assets/fonts/Montserrat-VariableFont_wght.ttf');
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
 @font-face {
   font-family: "montserrat";
-  src: url('public/assets_front/assets/fonts/Montserrat-VariableFont_wght.ttf');
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
 header {
   position: relative;
@@ -1546,7 +1546,7 @@ header#sidebar-header ul.nav-menu .mega-links-4columns ul.sub-menu-columns>li>a:
   width: 26px;
   height: 20px;
   margin: auto;
-  background-image: url('public/assets_front/assets/estimonials-icon.png');
+  background-image: url('../icons/testimonials-icon.png');
 }
 
 .testimonials.layout-1 .text {
@@ -1601,7 +1601,7 @@ header#sidebar-header ul.nav-menu .mega-links-4columns ul.sub-menu-columns>li>a:
 
 .nile-about-section {
   padding: 100px 0px 100px 0px;
-  background-image: url('public/assets_front/assets/img/ba_1.jpg');
+  background-image: url('../img/ba_call_action.jpg0');
   background-size: cover;
 }
 
@@ -1739,7 +1739,7 @@ a.action-bottom:hover {
 }
 
 .call-action.ba-1 {
-  background-image: url('public/assets_front/assets/img/ba_call_action.jpg');
+  background-image: url('../img/ba_call_action.jpg');
   background-size: cover;
 }
 
@@ -1749,7 +1749,7 @@ a.action-bottom:hover {
 
 .call-action.ba-3 {
   color: #222;
-  background-image: url('public/assets_front/assets/img/ba_1.jpg');
+  background-image: url('../img/ba_call_action.jpg');
   background-size: cover;
 }
 
@@ -1859,7 +1859,7 @@ a.action-bottom:hover {
 .page-title {
   background-image: linear-gradient(200deg, rgba(43, 75, 70, 0.814) 20%, rgba(43, 75, 70, 0.786) 40.82%,
       rgba(43, 75, 70, 0.848) 41.59%, #1e3b37d4 67.42%, #1e3b37 100.0%),
-    url('public/assets_front/assets/img/portfolio1.jpg');
+    url('../img/portfolio1.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -2637,7 +2637,7 @@ video {
   left: 15px;
   content: " ";
   position: absolute;
-  background-image: url('public/assets_front/assets/img/icon/icon-1.html');
+  background-image: url('../img/icon/icon-1.html');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -2653,7 +2653,7 @@ video {
   left: 15px;
   content: " ";
   position: absolute;
-  background-image: url('public/assets_front/assets/img/icon/icon-2.html');
+  background-image: url('../img/icon/icon-2.html');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -2669,7 +2669,7 @@ video {
   left: 15px;
   content: " ";
   position: absolute;
-  background-image: url('public/assets_front/assets/img/icon/icon-3.html');
+  background-image: url('../img/icon/icon-3.html');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -32549,7 +32549,7 @@ ul.pagination-style-2 li a .page-item:last-child .page-link {
 }
 
 #map-distributors>div:nth-child(1)>div>div:nth-child(1)>div:nth-child(3)>div:nth-child(2)>div:nth-child(4)>div>div:nth-child(3) {
-  background-image: url('public/assets_front/assets/img/close.html') !important;
+  background-image: url('../img/close.html') !important;
   width: 25px !important;
   height: 25px !important;
   top: 12px !important;
@@ -32688,7 +32688,7 @@ ul.pagination-style-2 li a .page-item:last-child .page-link {
 /* Section Style           -----------------------------------------------*
 ------------------------------------------------------------------------- */
 .map-ba {
-  background-image: url('public/assets_front/assets/images/map_ba.html');
+  background-image: url('../images/map_ba.html');
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -34329,7 +34329,7 @@ form.dark-form ::-ms-input-placeholder {
   width: 38px;
   height: 38px;
   opacity: 0.3;
-  background-image: url('public/assets_front/assets/assets/img/popup_close.html');
+  background-image: url('../img/popup_close.html');
   background-size: 38px 38px;
   -webkit-background-size: 38px 38px;
   -moz-background-size: 38px 38px;
@@ -34360,7 +34360,7 @@ form.dark-form ::-ms-input-placeholder {
 
 .rating ul li {
   display: inline-block;
-  background-image: url('public/assets_front/assets/img/star_0.html');
+  background-image: url('../img/star_0.html');
   background-repeat: no-repeat;
   background-position: center center;
   height: 14px;
@@ -34369,7 +34369,7 @@ form.dark-form ::-ms-input-placeholder {
 }
 
 .rating ul li.active {
-  background-image: url('public/assets_front/assets/img/star_1.html');
+  background-image: url('../img/star_1.html');
 }
 
 /* ========================================================================== */

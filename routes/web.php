@@ -43,14 +43,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 /****************************** Start Admin Routes ******************************/
 Route::Group(['prefix' => 'admin', 'middleware' => ['auth','lang']], function () { 
-
-    Route::prefix('lang')->name('lang.')->group( function () {
-        Route::controller(LangController::class)->group( function () {
-            Route::get('/ar' ,  'ar')->name('ar');
-            Route::get('/en' ,  'en')->name('en');
-        });
-    });
-
     //roles
     Route::resource('role', RoleController::class);
     Route::post('roleDelete', [RoleController::class, 'delete'])->name('role.delete');
@@ -226,7 +218,13 @@ Route::Group(['middleware' => ['lang']], function () {
 
 
 
-
+//lang routes
+Route::prefix('lang')->name('lang.')->group( function () {
+    Route::controller(LangController::class)->group( function () {
+        Route::get('/ar' ,  'ar')->name('ar');
+        Route::get('/en' ,  'en')->name('en');
+    });
+});
 
 //general routes
 Route::get('show_file/{folder_name}/{photo_name}', [GeneralController::class, 'show_file'])->name('show_file');
