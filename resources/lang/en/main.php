@@ -171,5 +171,7 @@ return [
     'Error'           => 'Error',
     'ValidationError' => 'There were validation errors.',
     'ServerError'     => 'There was a server error.',
+    "Coming Soon"     => 'Coming Soon',
+    "Log In"        => "Log In"
     /****************************** End Site ******************************/
 ];

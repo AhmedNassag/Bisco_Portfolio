@@ -5,10 +5,10 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <!-- Title -->
-<title> Coding System </title>
+<title>BIOHEALUX ADMIN</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="{{asset('assets_admin/img/favicon.png')}}">
+<link rel="shortcut icon" href="{{asset('assets_front\assets\img\logo.png')}}">
 
 <!-- Bootstrap CSS -->
 @if (App::getLocale() == 'ar')

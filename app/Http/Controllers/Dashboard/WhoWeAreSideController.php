@@ -49,8 +49,8 @@ class WhoWeAreSideController extends Controller
     {
         try {
             $validator = Validator::make($request->all(),[
-                'name_ar'    => 'nullable|string|max:191|unique:who_we_are_sides,name_ar',
-                'name_en'    => 'nullable|string|max:191|unique:who_we_are_sides,name_en',
+                'name_ar'    => 'nullable|string|max:191',
+                'name_en'    => 'nullable|string|max:191',
                 'details_ar' => 'nullable|string',
                 'details_en' => 'nullable|string',
                 'photo'      => 'required|image|mimes:jpeg,png,jpg,gif,svg',
@@ -124,8 +124,8 @@ class WhoWeAreSideController extends Controller
     {
         try {
             $validator = Validator::make($request->all(),[
-                'name_ar'    => 'nullable|string|max:191|unique:who_we_are_sides,name_ar,'.$request->id,
-                'name_en'    => 'nullable|string|max:191|unique:who_we_are_sides,name_en,'.$request->id,
+                'name_ar'    => 'nullable|string|max:191',
+                'name_en'    => 'nullable|string|max:191',
                 'details_ar' => 'nullable|string',
                 'details_en' => 'nullable|string',
                 'photo'      => 'nullable',

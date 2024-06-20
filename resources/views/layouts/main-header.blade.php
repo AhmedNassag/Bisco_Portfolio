@@ -7,10 +7,10 @@
 		<!-- Logo -->
 		<div class="header-left">
 			<a href="index" class="logo">
-				<img src="../assets_admin/img/logo.png" alt="Logo">
+				<img src="{{ asset('assets_front\assets\img\equipLogo.png') }}" alt="Logo">
 			</a>
 			<a href="index" class="logo logo-small">
-				<img src="../assets_admin/img/logo-small.png" alt="Logo" width="30" height="30">
+				<img src="{{ asset('assets_front\assets\img\equipLogo.png') }}" alt="Logo" width="30" height="30">
 			</a>
 			<!-- Sidebar Toggle -->
 			<a href="javascript:void(0);" id="toggle_btn">
@@ -110,7 +110,7 @@
 			<li class="nav-item dropdown has-arrow main-drop">
 				<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 					<span class="user-img">
-						<img src="../assets_admin/img/profiles/logo-01.png" alt="">
+						<img src="{{ asset('assets_front\assets\img\loop-logo1.png') }}" alt="Logo">
 						<span class="status online"></span>
 					</span>
 				</a>
